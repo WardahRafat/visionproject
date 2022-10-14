@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>calender</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
+
+
+    <style>
+        .container {
+            padding: 10px;
+        }
+
+        h4 {
+            color: #9059A4;
+            border-bottom: 2px solid #d5badf;
+        }
+
+        h3 {
+            color: black;
+            font-family: poppins;
+        }
+
+        h5 {
+            color: #6f696b;
+            border-bottom: 2px solid #d5badf;
+        }
+
+        .sp {
+            color: #615b63;
+        }
+
+        p {
+            color: #6f696b;
+        }
+
+        .btn:hover {
+            background-color: palevioletred;
+        }
+
+        .cart-btn {
+            display: inline;
+            background-color: #9059A4;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 30px;
+            transition: all .5s;
+        }
+
+        .cart-btn:hover {
+            background-color: darkgrey;
+        }
+
+       /**** Footer CSS ****/      
+ /************/
+.footer {
+    position: relative;
+    padding: 30px 0 0 0;
+    background: #ffffff;
+}
+
+.footer .footer-widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.footer .footer-widget h2 {
+    font-size: 25px;
+    white-space: nowrap;
+    margin-bottom: 20px; 
+}
+
+.footer .footer-widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .footer-widget ul li {
+    margin-bottom: 12px; 
+}
+
+.footer .footer-widget ul li:last-child {
+    margin-bottom: 0; 
+}
+
+.footer .footer-widget ul li a {
+    color: #353535;
+    white-space: nowrap;
+    display: block;
+    line-height: 23px;
+    transition: all .3s;
+}
+
+.footer .footer-widget ul li a::before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.footer .footer-widget ul li a:hover {
+    color: red;
+}
+
+.footer .footer-widget ul li a:hover::before {
+    content: '\f101';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.footer .contact-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer .contact-info p i {
+    margin-right: 5px;
+}
+
+.footer .social {
+    position: relative;
+    width: 100%;
+}
+
+.footer .social a {
+    display: inline-block;
+    margin: 10px 5px 0 0;
+    width: 40px;
+    height: 40px;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #353535;
+    border: 1px solid #353535;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.footer .social a:hover {
+    color: red;
+    border-color: red;
+}
+
+/************/
+/*** Footer Bottom CSS ****/
+/************/
+.footer-bottom {
+    position: relative;
+    padding: 25px 0;
+    background: #000000;
+}
+
+.footer-bottom .copyright {
+    text-align: left;
+}
+
+.footer-bottom .design-by {
+    text-align: right;
+}
+
+.footer-bottom .copyright p,
+.footer-bottom .design-by p {
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-bottom .copyright p a,
+.footer-bottom .design-by p a {
+    font-weight: 600;
+}
+
+.footer-bottom .copyright p a:hover,
+.footer-bottom .design-by p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768.98px) {
+    .footer-bottom .copyright,
+    .footer-bottom .design-by {
+        text-align: center; 
+    } 
+}
+
+        .heading {
+            font-size: 25px;
+            margin-right: 25px;
+            color: #615b63;
+        }
+
+        .fa {
+            font-size: 25px;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        /* Three column layout */
+        .side {
+            float: left;
+            width: 15%;
+            margin-top: 10px;
+        }
+
+        .middle {
+            float: left;
+            width: 70%;
+            margin-top: 10px;
+        }
+
+        /* Place text to the right */
+        .right {
+            text-align: right;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The bar container */
+        .bar-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: white;
+        }
+
+        /* Individual bars */
+        .bar-5 {
+            width: 60%;
+            height: 18px;
+            background-color: #04AA6D;
+        }
+
+        .bar-4 {
+            width: 30%;
+            height: 18px;
+            background-color: #2196F3;
+        }
+
+        .bar-3 {
+            width: 10%;
+            height: 18px;
+            background-color: #00bcd4;
+        }
+
+        .bar-2 {
+            width: 4%;
+            height: 18px;
+            background-color: #ff9800;
+        }
+
+        .bar-1 {
+            width: 15%;
+            height: 18px;
+            background-color: #f44336;
+        }
+
+        /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+        @media (max-width: 400px) {
+
+            .side,
+            .middle {
+                width: 100%;
+            }
+
+            /* Hide the right column on small screens */
+            .right {
+                display: none;
+            }
+        }
+
+
+        /* nav-link color */
+        .nav-item .nav-link {
+            color: #9059A4;
+            font-size: px;
+        }
+
+        /* magnifing glass */
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-magnifier-container {
+            position: relative;
+        }
+
+        .img-magnifier-glass {
+            position: absolute;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            cursor: none;
+            /*Set the size of the magnifier glass:*/
+            width: 100px;
+            height: 100px;
+        }
+
+        /*********** Feature CSS **********/
+        /**********************************/
+        .feature {
+            position: relative;
+        }
+
+        .feature .feature-col {
+            margin-bottom: 30px;
+        }
+
+        .feature .feature-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 30px 15px;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .feature .feature-content i {
+            color: crimson;
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+
+        .feature .feature-content h2 {
+            font-size: 18px;
+        }
+
+        .feature .feature-content p {
+            font-size: 15px;
+            margin: 0;
+            color: #6f696b;
+        }
+
+        /**********************************/
+    </style>
+    <script>
+        function magnify(imgID, zoom) {
+            var img, glass, w, h, bw;
+            img = document.getElementById(imgID);
+            /*create magnifier glass:*/
+            glass = document.createElement("DIV");
+            glass.setAttribute("class", "img-magnifier-glass");
+            /*insert magnifier glass:*/
+            img.parentElement.insertBefore(glass, img);
+            /*set background properties for the magnifier glass:*/
+            glass.style.backgroundImage = "url('" + img.src + "')";
+            glass.style.backgroundRepeat = "no-repeat";
+            glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+            bw = 3;
+            w = glass.offsetWidth / 2;
+            h = glass.offsetHeight / 2;
+            /*execute a function when someone moves the magnifier glass over the image:*/
+            glass.addEventListener("mousemove", moveMagnifier);
+            img.addEventListener("mousemove", moveMagnifier);
+            /*and also for touch screens:*/
+            glass.addEventListener("touchmove", moveMagnifier);
+            img.addEventListener("touchmove", moveMagnifier);
+            function moveMagnifier(e) {
+                var pos, x, y;
+                /*prevent any other actions that may occur when moving over the image*/
+                e.preventDefault();
+                /*get the cursor's x and y positions:*/
+                pos = getCursorPos(e);
+                x = pos.x;
+                y = pos.y;
+                /*prevent the magnifier glass from being positioned outside the image:*/
+                if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+                if (x < w / zoom) { x = w / zoom; }
+                if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+                if (y < h / zoom) { y = h / zoom; }
+                /*set the position of the magnifier glass:*/
+                glass.style.left = (x - w) + "px";
+                glass.style.top = (y - h) + "px";
+                /*display what the magnifier glass "sees":*/
+                glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+            }
+            function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                /*get the x and y positions of the image:*/
+                a = img.getBoundingClientRect();
+                /*calculate the cursor's x and y coordinates, relative to the image:*/
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                /*consider any page scrolling:*/
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return { x: x, y: y };
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid px-md-5">
+        <div class="row justify-content-between">
+            <div class="col-md-8 order-md-last">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <a class="navbar-brand" href="index.html">RYANA CALENDAR <span>Stationary Shop</span></a>
+                    </div>
+                    <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control pl-3" placeholder="Search">
+                                <button type="submit" placeholder="" class="form-control search"><span
+                                        class="fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a href="#" class="d-flex align-items-center justify-content-center"><i
+                                class="fa-solid fa-cart-arrow-down"></i></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><i
+                                class="fa-regular fa-address-book"></i></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                                class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Product</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="#">DIARIES</a>
+                            <a class="dropdown-item" href="#">JOURNAL</a>
+                            <a class="dropdown-item" href="#">PENCIL</a>
+                            <a class="dropdown-item" href="#">CALENDAR</a>
+                            <a class="dropdown-item" href="#">GIFTSETS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">NewIn</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- BREADCRUMB -->
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+            <li class="breadcrumb-item"><a href="product.html.">PRODUCT</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CALENDAR</li>
+        </ol>
+    </nav>
+
+
+
+    <!--description-->
+    <div class="container mt-4 mb-5">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="img-magnifier-container">
+                    <img class="img-fluid " id="myimage" src="calendar2.jpg" width="500px" height="600px">
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <h3 class="mt-5 mb-4">Year calendar</h3>
+                <h4>DESCRIPTION</h4>
+                <P>Perfect for bringing some order to your home, office or kitchen, this essential calendar will help you tame the mayhem of everyday life.
+                    Featuring a month-to-view, plus 12 useful pockets for storing all those tickets, invites and bills to pay, this essential calendar will keep the important things front-of-mind. </P>
+                <h5>Color : <span class="sp">white and black</span> </h5>
+                <h5>Size : <span class="sp">Medium</span> </h5>
+                <h5>Product code : <span class="sp">cl-02</span> </h5>
+                <h5>Availability : <span class="sp">In Stock</span> </h5>
+                <h2><span class="sp">$1.9</span> </h2>
+
+                <br>
+
+                <!--tabs-->
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#home">DESCRIPTION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#profile">SPECIFICATION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#profile1">REVIEW</a>
+                        </li>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade active show" id="home">
+                                <p>Perfect for bringing some order to your home, office or kitchen, this essential calendar will help you tame the mayhem of everyday life.
+                                    Featuring a month-to-view, plus 12 useful pockets for storing all those tickets, invites and bills to pay, this essential calendar will keep the important things front-of-mind. </p>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <p>This clever Desktop Calendar, featuring a month to a view, plus useful monthly pockets, also has a handy stand making it ideal for a clutter-free home, office or kitchen. Runs from January to December 2022.</p>
+                                <div class="tab-pane fade" id="#profile"></div>
+                            </div>
+
+                            <div class="tab-pane fade" id="profile1">
+                                <span class="heading">User Rating</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p>4.1 average based on 254 reviews.</p>
+                                <hr style="border:3px solid #f1f1f1">
+
+                                <div class="row">
+                                    <div class="side">
+                                        <div>5 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                            <div class="bar-5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>150</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>4 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                            <div class="bar-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>63</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>3 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                            <div class="bar-3"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>15</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>2 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                            <div class="bar-2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>6</div>
+                                    </div>
+                                    <div class="side">
+                                        <div>1 star</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="bar-container">
+                                            <div class="bar-1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side right">
+                                        <div>20</div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="#profile"></div>
+                            </div>
+                        </div>
+
+                        <button class="cart-btn btn-large btn-dark mt-5 ">Add To Cart</button>
+                </div>
+            </div>
+
+
+            <!-- Feature Start-->
+            <div class="feature mt-5">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6 feature-col">
+                            <div class="feature-content">
+                                <i class="fab fa-cc-mastercard"></i>
+                                <h2>Secure Payment</h2>
+                                <p>
+                                    Protected from danger or harm
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 feature-col">
+                            <div class="feature-content">
+                                <i class="fa fa-truck"></i>
+                                <h2>Worldwide Delivery</h2>
+                                <p>
+                                    International shipping is the term used to describe a parcel delivery.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 feature-col">
+                            <div class="feature-content">
+                                <i class="fa fa-sync-alt"></i>
+                                <h2>90 Days Return</h2>
+                                <p>
+                                    A return and refund policy outlines how, when,
+                                    return purchased goods and services.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 feature-col">
+                            <div class="feature-content">
+                                <i class="fa fa-comments"></i>
+                                <h2>24/7 Support</h2>
+                                <p>
+                                    24/7 customer support means customers can get help and find answers to questions as
+                                    soon as.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- Feature End-->
+
+
+
+                     <!-- footer    -->
+   
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>D-10 Shop, Tariq Road, Karachi</p>
+                                <p><i class="fa fa-envelope"></i>rycalendar@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>+92-000-3376631</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Pyament Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+					<div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>2022Copyright &copy;All Rights Reserved</p>
+                    </div>
+
+                    <div class="col-md-6 design-by">
+                        <p>Ryana Calendar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->       
+        
+        
+
+
+
+
+
+
+</body>
+<script>
+    /* Initiate Magnify Function
+    with the id of the image, and the strength of the magnifier glass:*/
+    magnify("myimage", 3);
+</script>
+<script src="js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="bootstrap/bt/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+
+
+
+
+<script src="bootstrap/bt/js/lightbox-plus-jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+</html>
